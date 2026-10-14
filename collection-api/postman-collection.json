@@ -1,0 +1,93 @@
+{
+  "info": {
+    "name": "Kuis 1 PAW 2 - Penyewaan Mobil",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Tambah Mobil (POST)",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"merk_mobil\": \"Toyota Avanza\",\n  \"harga_per_hari\": 350000,\n  \"tersedia\": true\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/mobil",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["api", "mobil"]
+        }
+      }
+    },
+    {
+      "name": "Ambil Semua Mobil (GET)",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:3000/api/mobil",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["api", "mobil"]
+        }
+      }
+    },
+    {
+      "name": "Ambil Mobil Berdasarkan ID (GET)",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:3000/api/mobil/6acf9070311f7eec239ceb37",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["api", "mobil", "6acf9070311f7eec239ceb37"]
+        }
+      }
+    },
+    {
+      "name": "Update Mobil (PUT)",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"merk_mobil\": \"Toyota Avanza Veloz\",\n  \"harga_per_hari\": 400000,\n  \"tersedia\": false\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/mobil/6acf9070311f7eec239ceb37",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["api", "mobil", "6acf9070311f7eec239ceb37"]
+        }
+      }
+    },
+    {
+      "name": "Hapus Mobil (DELETE)",
+      "request": {
+        "method": "DELETE",
+        "url": {
+          "raw": "http://localhost:3000/api/mobil/6acf9070311f7eec239ceb37",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["api", "mobil", "6acf9070311f7eec239ceb37"]
+        }
+      }
+    }
+  ]
+}
